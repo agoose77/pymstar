@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-__all__ = ("mstar",)
+__all__ = ("mstar", "TARGETS")
 
 from . import _ext
 
