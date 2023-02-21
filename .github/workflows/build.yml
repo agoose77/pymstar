@@ -13,23 +13,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ ubuntu-latest, macos-latest ]
-        arch: [ auto64 ]
-        build: [ "cp*", "pp*" ]
-
-        include:
-          - os: macos-latest
-            type: "Universal"
-            arch: universal2
-            build: "cp*"
-
-          - os: windows-latest
-            arch: auto64
-            build: "cp*"
-
-          - os: windows-latest
-            arch: auto32
-            build: "cp{37,38,39}-*"
+        os: [ubuntu-20.04, windows-2019, macos-11]
 
     steps:
       - uses: actions/checkout@v3
